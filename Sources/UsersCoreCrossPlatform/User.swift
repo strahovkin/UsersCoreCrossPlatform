@@ -7,15 +7,15 @@
 
 import Foundation
 
-final class User: Codable {
-    var id: UUID?
-    var name: String
-    var username: String
-    var password: String
-    var email: String
-    var profilePicture: String?
+public final class User: Codable {
+    public var id: UUID?
+    public var name: String
+    public var username: String
+    public var password: String
+    public var email: String
+    public var profilePicture: String?
     
-    init(name: String, username: String, password: String, email: String, profilePicture: String? = nil) {
+    public init(name: String, username: String, password: String, email: String, profilePicture: String? = nil) {
         self.name = name
         self.username = username
         self.password = password
@@ -23,12 +23,12 @@ final class User: Codable {
         self.profilePicture = profilePicture
     }
     
-    final class Public: Codable {
-        var id: UUID?
-        var name: String
-        var username: String
+    public final class Public: Codable {
+        public var id: UUID?
+        public var name: String
+        public var username: String
         
-        init(id: UUID?, name: String, username: String) {
+        public init(id: UUID?, name: String, username: String) {
             self.id = id
             self.name = name
             self.username = username
